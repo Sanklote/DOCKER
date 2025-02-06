@@ -1,12 +1,12 @@
 # Installation docker 
 
 ### Suppression des paquets qui pourrait entrer en conflit 
-```
+```bash
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 ```
 
 ### Configuration paquet apt
-```
+```bash
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -23,11 +23,11 @@ sudo apt-get update
 ```
 
 ### Installer derniere version 
-```
+```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
 ### Testez
-```
+```bash
 sudo docker run hello-world
 ```
