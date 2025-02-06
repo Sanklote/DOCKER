@@ -31,23 +31,23 @@ On vient y mettre une page html test
 
 ### Démarrer un conteneur et servir la page html créée précédemment à l’aide d’un volume (option -v de docker run)
 ```bash
-docker run -d -p 80:80 -v /var/www/html:/usr/share/nginx/html nginx
+docker run -d -p 80:80 -v /var/www/html/:/usr/share/nginx/html nginx
 ```
 
 ### Supprimer le conteneur précédent et arriver au même résultat que précédemment à l’aide de la commande docker cp
 Supprimer l'ancien conteneur 
 ```bash
-docker stop mon-nginx
+docker stop nginx
 ```
 
 ```bash
-docker rm mon-nginx
+docker rm nginx
 ```
 Lancer un conteneur sans volume
 ```bash
-docker run -d -p 80:80 --name mon-nginx nginx
+docker run -d -p 80:80 --name nginx nginx
 ```
 Copier le fichier dans le conteneur
 ```bash 
-docker cp index.html mon-nginx:/usr/share/nginx/html/index.html
+docker cp /var/www/html/index.html nginx:/usr/share/nginx/html/index.html
 ```
