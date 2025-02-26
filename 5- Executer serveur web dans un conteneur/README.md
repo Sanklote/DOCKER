@@ -12,7 +12,7 @@ docker images
 
 ### On vient y mettre une page html test
 ```bash
-echo "<html><body><h1>Ma page personnalisée</h1></body></html>" > index.html
+echo "<html><body><h1>Ma page html</h1></body></html>" > index.html
 ```
 
 ### Démarrer un conteneur et servir la page html créée précédemment à l’aide d’un volume (option -v de docker run)
