@@ -2,7 +2,7 @@
 
 ### Récupérer l’image sur le Docker Hub
 ```bash
-docker pull nginx:stable
+docker pull nginx
 ```
 
 ### Vérifier que cette image est présente en local
@@ -15,18 +15,8 @@ docker images
 nano /var/www/html/
 ```
 On vient y mettre une page html test
-```html
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de Test</title>
-</head>
-<body>
-    <h1>Test</h1>
-</body>
-</html>
+```bash
+echo "<html><body><h1>Ma page personnalisée</h1></body></html>" > index.html
 ```
 
 ### Démarrer un conteneur et servir la page html créée précédemment à l’aide d’un volume (option -v de docker run)
